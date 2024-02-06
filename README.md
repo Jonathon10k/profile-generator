@@ -5,7 +5,7 @@ My submission for the Module 5 Password Generator JavaScript challenge
 
 ## Description
 
-This is my submission for the Module 12 Team Profile Generator challenge. The challenge required the development of a Node command-line app, which takes in user input (via the Enquirer NPM module), processes this data and outputs a fully-formed HTML document displaying the details of individual team members.
+This is my submission for the Module 12 Team Profile Generator challenge. The challenge required the development of a Node command-line app, which takes in user input (via the Inquirer NPM module), processes this data and outputs a fully-formed HTML document displaying an overview of the team members along with individual details.
 
 ## Installation
 
