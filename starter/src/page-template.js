@@ -1,3 +1,5 @@
+
+
 // creates the team
 const generateTeam = team => {
 
@@ -115,4 +117,8 @@ module.exports = team => {
 </body>
 </html>
     `;
+};
+
+module.exports = {
+    generateTeam
 };
