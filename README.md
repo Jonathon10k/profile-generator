@@ -1,6 +1,5 @@
 # Test-Driven-Development: Team Profile Generator (Module 12 Challenge)
-My submission for the Module 5 Password Generator JavaScript challenge
-
+My submission for the Module 12 Team Profile Generator challenge
 ![Password app preview](./assets/images/preview.jpeg)
 
 ## Description
