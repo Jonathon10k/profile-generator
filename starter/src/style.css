@@ -8,9 +8,9 @@
   justify-content: center;
 }
 
-
-.card-header h2, h3 {
-    color: white;
+.card-header h2,
+h3 {
+  color: white;
 }
 
 .card {
@@ -21,13 +21,18 @@
 }
 
 .card-body {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .card-header {
-    background-color: rgb(0, 76, 255);
-    color: rgb(235, 219, 219);
+  background-color: rgb(0, 76, 255);
+  color: rgb(235, 219, 219);
 }
- .card-header i {
-    margin-right: 5px;
- }
+.card-header i {
+  margin-right: 5px;
+}
+
+.team-area {
+  display: flex;
+  flex-wrap: wrap;
+}
