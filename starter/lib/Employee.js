@@ -9,6 +9,9 @@ class Employee {
     }
 
     // Methods
+    getName() {
+        return this.name;
+    }
     getId() {
         return this.id;
     }
@@ -22,6 +25,4 @@ class Employee {
     }
 }
 
-let Joe = new Employee("Joe", "1", "joe@biz.com");
-console.log(Joe);
 module.exports = Employee;

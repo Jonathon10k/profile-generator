@@ -2,11 +2,11 @@
 
 const Employee = require("./Employee");
 
-class Manager extends Employee {
-    // Employee constructor
-    constructor(name, id, email, officeNumber) {
+class Engineer extends Employee {
+    // Engineer constructor
+    constructor(name, id, email, github) {
         super(name, id, email);
-        this.officeNumber = officeNumber;
+        this.github = github;
     }
 
     // Methods
@@ -19,11 +19,12 @@ class Manager extends Employee {
     }
 
     getRole() {
-        return "Manager";
+        return "Engineer";
+    }
+
+    getGithub() {
+        return this.github;
     }
 }
 
-const Sarah = new Manager("Sarah", "2", "sarah@biz.com", 3);
-console.log(Sarah);
-
-module.exports = Manager;
+module.exports = Engineer;
