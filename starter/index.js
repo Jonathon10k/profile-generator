@@ -4,16 +4,12 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-const template = require("./src/page-template");
+const team = require("./src/page-template");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-
-const render = require("../starter/src/page-template.js");
-
 const teamData = [];
 
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
-
+// Manager prompt set
 inquirer.prompt([
     {
         name: "name",
@@ -44,7 +40,7 @@ inquirer.prompt([
 
 ]).then(response => {
     let manager = new Manager(response.name, response.id, response.email, response.officeNumber);
-    teamData.push(manager); // Push manager object to teamData array
+    teamData.push(manager); // Push new Manager instance to team array
     nextChoice(response.choices);
 
 });
@@ -82,7 +78,7 @@ function promptsEngineer() {
     ]).then(response => {
 
         let engineer = new Engineer(response.name, response.id, response.email, response.github);
-        teamData.push(engineer);
+        teamData.push(engineer); // Push new Engineer instance to team array
         nextChoice(response.choices);
     });
 }
@@ -119,7 +115,7 @@ function promptsIntern() {
 
     ]).then(response => {
         let intern = new Intern(response.name, response.id, response.email, response.school);
-        teamData.push(intern);
+        teamData.push(intern); // Push new Intern instance to team array
         nextChoice(response.choices);
     });
 }
@@ -134,15 +130,25 @@ function nextChoice(choice) {
             promptsIntern();
             break;
         case "Finish building the team":
-            renderTeam();
+            renderTeamPage();
             break;
         default: console.log("Error");
             break;
-    }
-}
+    };
+};
 
-function renderTeam() {
-    console.log(teamData);
-    console.log(template.generateTeam(teamData));
-}
+// Render team data to HTML and generate file
+function renderTeamPage() {
+    // Create output dir
+    fs.mkdir("output", (e => {
+        e ? console.log(error) : console.log("Dir created");
+    }));
+
+    // Generate page HTML from template
+    const pageHTML = team(teamData);
+
+    fs.writeFile(outputPath, pageHTML, err => {
+        err ? console.log(err) : console.log("File write success");
+    });
+};
 
