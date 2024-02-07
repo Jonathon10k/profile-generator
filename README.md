@@ -6,6 +6,8 @@ My submission for the Module 12 Team Profile Generator challenge
 
 This is my submission for the Module 12 Team Profile Generator challenge. The challenge required the development of a Node command-line app, which takes in user input (via the Inquirer NPM module), processes this data and outputs a fully-formed HTML document displaying an overview of the team members along with individual details.
 
+Video demonstration: https://jonathon10k.github.io/module12-generated-profile/profile-generator-demo.mp4
+
 Live example of a generated profile page:
 https://jonathon10k.github.io/module12-generated-profile/team.html
 
